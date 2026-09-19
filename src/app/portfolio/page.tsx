@@ -1,0 +1,1 @@
+import { Sidebar } from "@/components/sidebar"; export default function Page(){return <div className="flex"><Sidebar/><main className="p-10"><h1 className="text-4xl font-bold">Portfolio</h1><p className="mt-3 text-[var(--muted)]">Show the problem, task, skills, result and evidence.</p></main></div>}
