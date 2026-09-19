@@ -1,0 +1,3 @@
+"use server";
+import { redirect } from "next/navigation";import { createClient } from "@/lib/supabase/server";
+export async function signup(formData:FormData){const fullName=String(formData.get("full_name")||"");const email=String(formData.get("email")||"");const password=String(formData.get("password")||"");const supabase=await createClient();const {data,error}=await supabase.auth.signUp({email,password,options:{data:{full_name:fullName}}});if(error)redirect("/signup?error="+encodeURIComponent(error.message));if(data.user){await supabase.from("profiles").upsert({id:data.user.id,full_name:fullName})}if(data.session)redirect("/");redirect("/login?message=Check your email to confirm your account")}
