@@ -1,0 +1,1 @@
+import { Sidebar } from "@/components/sidebar"; export default function Page(){return <div className="flex"><Sidebar/><main className="p-10"><h1 className="text-4xl font-bold">Career Sync</h1><p className="mt-3 text-[var(--muted)]">Turn demonstrated skills into accurate CV, LinkedIn and GitHub evidence.</p></main></div>}
