@@ -1,0 +1,1 @@
+import { Sidebar } from "@/components/sidebar"; export default function Page(){return <div className="flex"><Sidebar/><main className="p-10"><h1 className="text-4xl font-bold">Projects</h1><p className="mt-3 text-[var(--muted)]">Build evidence by solving practical business problems.</p></main></div>}
